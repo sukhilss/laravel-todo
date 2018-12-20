@@ -1,5 +1,3 @@
-create a file for app/Repositories/Repository.php.
-
 <?php
 
 namespace App\Repositories;
