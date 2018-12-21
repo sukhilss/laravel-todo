@@ -1,5 +1,3 @@
-create a file for app/Repositories/Repository.php.
-
 <?php
 
 namespace App\Repositories;
@@ -71,7 +69,7 @@ class Repository implements RepositoryInterface {
      * @return type
      */
     public function show($id) {
-        return $this->model - findOrFail($id);
+        return $this->model->findOrFail($id);
     }
 
     /**
