@@ -15,11 +15,14 @@ class CreateToDoTable extends Migration
     {
         Schema::create('to_do', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->unsignedInteger('user_id');
+            $table->string('title');
             $table->text('description');
             $table->dateTime('due_at');
             $table->enum('status', ['New', 'Completed', 'Due'])->default('New');
             $table->timestamps();
+            
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

@@ -69,7 +69,7 @@ class Repository implements RepositoryInterface {
      * @return type
      */
     public function show($id) {
-        return $this->model - findOrFail($id);
+        return $this->model->findOrFail($id);
     }
 
     /**

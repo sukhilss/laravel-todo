@@ -13,4 +13,11 @@ class ToDo extends Model {
      */
     protected $table = 'to_do';
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['title', 'description', 'due_at', 'user_id'];
+
 }
